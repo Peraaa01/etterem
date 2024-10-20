@@ -1,0 +1,62 @@
+[
+
+    {
+        "key": "name",
+        "label": "Étel neve:",
+        "rules": [
+            {
+                "type": "min_lenght",
+                "condition": 6,
+                "error": "A névnek legalább 6 karakter hosszúnak kell lennie."
+
+            }
+        ]
+    },
+    {
+        "key": "price",
+        "label": "Étel ára:",
+        "type": "number",
+        "min": 0,
+        "rules": [
+            {
+                "type": "min_price",
+                "condition": 1,
+                "error": "Nem adott meg árat."
+
+            }
+        ]
+    },
+    {
+        "key": "description",
+        "label": "Étel leírása:",
+        "type": "textarea",
+        "rules": [
+            {
+                "type": "min_length",
+                "condition": 10,
+                "error": "A leírásnak legalább 10 karakter hosszúnak kell lennie."
+
+            }
+        ]
+    },
+    {
+            "key": "type_id",
+            "label": "Étel típusa:",
+            "type": "select"
+   
+    },
+    {
+        "key": "image_path",
+        "label": "Étel fényképe:",
+        "rules": [
+            {
+                "type": "min_length",
+                "condition": 6,
+                "error": "A fájlnévnek( kiterjesztéssel együtt) legalább 6 karakter hosszúnak kell lennie."
+
+            }
+        ]
+        
+    }
+
+]

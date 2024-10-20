@@ -1,0 +1,39 @@
+[
+    {
+        "key": "food_id",
+        "label": "Étel",
+        "type": "select"
+    },
+
+    {
+        "key": "doses",
+        "label": "Adag",
+        "type": "number",
+        "min": 0,
+        "rules": [ 
+            {   "type": "min",
+                "condition": 1,
+                "error": "Legalább 1 adagot meg kell adni."
+            }
+        ]
+    },
+
+    {
+        "key": "delivery_home",
+        "label": "Házhozszállítás",
+        "type": "checkbox"
+    },
+    {
+        "key": "delivery_time",
+        "label": "Házhozszállítás időpontja",
+        "type": "datetime-local",
+        "rules": [
+            {
+                "type": "hour_limit",
+                "condition": 2,
+                "error": "Legkorábban megrendeléstől számított 2 órára tudunk megrendelést felvenni."
+            }
+        ]
+    }
+
+]

@@ -1,0 +1,52 @@
+[
+    
+    {
+        "key": "name",
+        "label": "Étel"   
+    },
+    {
+        "key": "food_type",
+        "label": "Étel típusa"   
+    },
+
+    {
+        "key": "doses",
+        "label": "Adag",
+        "type": "number"
+    },
+    {
+        "key": "price",
+        "label": "Ár:",
+        "type": "number"
+    },
+    {
+        "key": "delivery_home",
+        "label": "Házhozszállítás",
+        "type": "checkbox"
+    },
+    {
+        "key": "delivery_home_price",
+        "label": "Házhozszállítás díja"
+    },
+   
+    {
+        "key": "delivery_time",
+        "label": "Házhozszállítás időpontja",
+        "type": "datetime-local"
+    },
+    
+    {
+        "key": "description",
+        "label": "Leírás",
+        "type": "textarea"
+    },
+    {
+        "key": "image_path",
+        "label": "Fénykép"   
+    },
+   
+    {
+        "key": "total_amount",
+        "label": "Végösszeg"
+    }
+]

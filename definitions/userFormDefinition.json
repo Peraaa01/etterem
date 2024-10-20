@@ -1,0 +1,119 @@
+[
+    {
+        "key": "email",
+        "label": "E-mail:",
+        "rules": [
+            {
+                "type": "pattern",
+                "condition": "/^[a-zA-Z0-9._%+-]+\\@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/",
+                "error": "Nem megfelelő az email cím formátuma. <br/> Az email-cím felhasználónév része egy vagy több betűt, számot és speciális karaktert (._%+-) tartalmazhat. <br /> Utána következik a @ szimbólum, amely elválasztja a felhasználó nevet és a tartományi részt.<br /> A tartományrész egy vagy több betűt és számot, ezenkívül pontokat és kötőjeleket tartalmazhat. <br /> A legfelső szintű domain legalább két karakter hosszúnak kell lennie és betűket tartalmazhat."
+            },
+            {
+                "type": "unique",
+                "error": "Az email cím már létezik."
+            }
+
+        ]
+
+    },
+    {
+        "key": "password",
+        "label": "Jelszó:",
+        "type": "password",
+        "rules": [
+            {
+                "type": "min",
+                "condition": 6,
+                "error": "A jelszónak legalább 6 karakter hosszúnak kell lennie."
+            },
+            {
+                "type": "pattern", 
+                "condition": "/(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/",
+                "error": "A jelszónak tartalmaznia kell legalább egy kisbetűt, egy nagybetűt, egy számot és egy speciális karaktert (#?!@$%^&*-)."
+
+            },
+            {
+                "type": "compare_equal",
+                "condition": "password_repeated",
+                "error": "A két jelszó nem egyezik meg."
+
+        }
+        ]
+    },
+    {
+        "key": "password_repeated",
+        "label": "Jelszó ismétlése:",
+        "type": "password"
+    },
+
+    {
+        "key": "phone_number",
+        "label": "Telefonszám:",
+        "rules": [
+            {
+                "type": "pattern",
+                "condition": "/^[0-9]*$/",
+                "error": "A telefonszámból csak a számokat kell megadnia, az elválaasztójeleket nem."
+            }
+        ]
+    },
+    {
+        "key": "lastname",
+        "label": "Vezetéknév:",
+        "rules": [
+            {
+            "type": "min",
+            "condition": 4,
+            "error": "A vezetéknév legalább 4 karakter hosszúnak kell lennie."
+            },
+            {
+                "type": "max",
+                "condition": 15,
+                "error": "A vezetéknév legfeljebb 15 karakter hosszúnak kell lennie."
+            }
+        ]
+    },
+    {
+        "key": "firstname",
+        "label": "Keresztnév:"
+ 
+    },
+
+   
+    {
+        "key": "street",
+        "label": "Utca:",
+        "rules": [
+            {
+                "type": "pattern",
+                "condition": "/^[^0-9]+ [^0-9]+$/",
+                "error": "Hiányos vagy pontatlan cím! <br /> Kötelező megadni a közterület nevét és jellegét!"
+            }
+        ]
+    },
+    {
+        "key": "number",
+        "label": "Házszám:",
+        "rules": [
+            {
+                "type": "pattern",
+                "condition": "/^[0-9]+(( )*|(\\/))[a-zA-Z]*$/",
+                "error": "Az épület betűjelét a házszám után lehet megadni a minta szerint : 6A, 6 A, 6/A"
+            }
+        ]
+    },
+    
+    {
+        "key": "user_conditions",
+        "label": "Felhasználói feltételek elfogadása",
+        "type": "checkbox",
+        "rules": [
+            {
+                "type": "required_checked",
+                "condition": 1,
+                "error": "A felhasználói feltételek elfogadása nélkül nem lehet regisztrálni."
+            }
+        ]
+    }
+
+]

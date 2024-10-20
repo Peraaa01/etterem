@@ -1,0 +1,32 @@
+[
+    {
+        "key": "email",
+        "label": "E-mail",
+        "type": "email",
+        "rules": [
+            {
+                "type": "regex",
+                "condition": "/^[a-zA-Z_0-9]+\\@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+$/",
+                "error": "Helytelen e-mail cím"
+            }
+        ]
+    },
+    {
+        "key": "password",
+        "label": "Jelszó",
+        "type": "password",
+        "rules": [
+            {
+                "type": "compare_equal",
+                "condition": "password_repeat"
+            }
+        ],
+        "force_show": true
+    },
+    {
+        "key": "password_repeat",
+        "label": "Jelszó ismétlése",
+        "type": "password",
+        "force_show": true
+    }
+]
